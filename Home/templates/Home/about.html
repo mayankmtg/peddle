@@ -1,0 +1,43 @@
+{% extends 'Home/base.html' %}
+{% load staticfiles %}
+{% block title %}About{% endblock %}
+{% block activeAbout %}active{%endblock%}
+{% block body %}
+	<br><br><br><br><br><br>
+	
+	<div class="container marketing">
+		<center><h1>About</h1></center>
+		<hr>
+		<br>
+	  <div class="row">
+	    <div class="col-lg-4">
+	      <img class="img-circle" src="{% static 'Home/images/profile.jpg' %}" alt="Generic placeholder image" width="200">
+	      <h2>Mayank Mohindra</h2>
+	      <p>
+<pre>
+Undergrad, IIIT-Delhi
+Developer and Designer
+Find me on GitHub:
+<a href="https://github.com/mayankmtg">https://github.com/mayankmtg</a>
+</pre>
+	      
+	      </p>
+	      <p><a class="btn btn-default" href="#" role="button">View Full Profile &raquo;</a></p>
+	    </div>
+	    	<!-- /.col-lg-4 -->
+	    <div class="col-lg-8" style="border-style: outset;border-radius: 40px;">
+	      <h2>Peddle</h2>
+	      <hr>
+	      <p style="font-size: 18px;">
+	      Peddle is a completely funstional dynamic e-commerce website that is highly customisable and useable by any person regardless of their background.
+	      <br>
+	      You can use the admin interface to add more products and delete them in any case. You can also use them to add discounts to the products and remove them whenever needed.
+	      <br>
+	      The home page displays the products with the best deals only and no other.
+	      </p>
+	      <br><br><br><br>
+	    </div><!-- /.col-lg-4 -->
+	    
+	  </div><!-- /.row -->
+	</div>
+{% endblock %}

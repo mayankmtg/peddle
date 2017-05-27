@@ -1,0 +1,55 @@
+{% extends 'Home/base.html' %}
+{% load staticfiles %}
+{% block title %}Products{% endblock %}
+{% block activeProduct %}active{%endblock%}
+{% block body %}
+<br><br><br><br>
+	<div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead">Catagories</p>
+                <div class="list-group">
+                    <a href="{% url 'Home:product' 'all' %}" class="list-group-item"><b><i>All</i></b></a>
+                    {% for cats in all_cats %}
+                    <a href="{% url 'Home:product' cats.name %}" class="list-group-item">{{ cats.name }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="row">
+                	{% for prod in prods %}
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="{% static 'Home/images/Products/' %}{{ prod.img }}" alt="" style="height: 150px;">
+                            <div class="caption">
+                                <h4 class="pull-right">₹{{ prod.price }}</h4>
+                                <h4><a href="#">{{ prod.name }}</a>
+                                </h4>
+                                <p>General Description</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">15 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>	
+                    {% endfor %}
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+{% endblock %}
