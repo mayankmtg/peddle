@@ -9,5 +9,7 @@ urlpatterns = [
     url(r'^about/$', views.about, name='about'),
     url(r'^contact/$', views.contact, name='contact'),
     url(r'^product/(?P<cat_name>\w+)/$', views.product, name='product'),
-    url(r'^cat=(?P<cat_id>[0-9]+)/$', views.detail, name='detail'),
+    url(r'^detail/([\w ]+)/$', views.detail, name='detail'),
+    url(r'^cart/$', views.cart, name='cart'),
+
 ]

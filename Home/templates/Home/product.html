@@ -26,7 +26,7 @@
                             <img src="{% static 'Home/images/Products/' %}{{ prod.img }}" alt="" style="height: 150px;">
                             <div class="caption">
                                 <h4 class="pull-right">₹{{ prod.price }}</h4>
-                                <h4><a href="#">{{ prod.name }}</a>
+                                <h4><a href="{% url 'Home:detail' prod.name %}">{{ prod.name }}</a>
                                 </h4>
                                 <p>General Description</p>
                             </div>

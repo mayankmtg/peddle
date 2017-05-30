@@ -21,3 +21,5 @@ class Offer(models.Model):
 
 	def __str__(self):
 		return self.product.name
+
+#class Cart(models.Model):
